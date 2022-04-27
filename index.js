@@ -102,6 +102,11 @@ async function run() {
             const result = await orderCollection.insertOne(order);
             res.send(result);
         });
+
+        // add hero
+        app.get("/hero", (req, res) => {
+            res.send("hero is running");
+        });
     } finally {
     }
 }
